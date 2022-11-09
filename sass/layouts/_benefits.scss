@@ -1,0 +1,36 @@
+.benefits {
+  padding-top: 94px;
+
+  &-list {
+    display: flex;
+  }
+
+  &-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    background-color: var(--command-bg-colour);
+  }
+  &-title {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+  }
+  &-description {
+    color: var(--text-colour-two);
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
+
+.benefits-block {
+  max-width: 270px;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
