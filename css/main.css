@@ -68,7 +68,7 @@ img {
 /* galary accent colour - rgba(33, 150, 243, 0.9) */
 /* Скругляє краї малюнка при переповненні.
 overflow: hidden; */
-.visually-hidden {
+.container__visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
   width: 1px;
@@ -93,7 +93,7 @@ overflow: hidden; */
   text-align: center;
 }
 
-.logo {
+.activation__logo {
   margin-right: 93px;
   font-family: "Raleway", sans-serif;
   color: var(--text-colour);
@@ -103,7 +103,7 @@ overflow: hidden; */
   letter-spacing: 0.03em;
 }
 
-.web-logo {
+.logo__web {
   color: var(--accent-colour);
 }
 
@@ -329,22 +329,23 @@ overflow: hidden; */
   padding: 24px 0;
   border-bottom: 1px solid var(--border-colour);
 }
-.head-nav {
+.head__nav {
   display: flex;
 }
-.head-list {
+
+/* --------Navigation--------------- */
+.head__container {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
   /* gap: 50px; */
   display: flex;
   align-items: center;
 }
 
-/* --------Navigation--------------- */
-.navigat {
-  display: flex;
-  align-items: center;
-}
-
-.head-link {
+.menu__link {
   display: block;
   font-weight: 500;
   font-size: 14px;
@@ -352,11 +353,11 @@ overflow: hidden; */
   letter-spacing: 0.02em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.head-link:focus, .head-link:hover {
+.menu__link:focus, .menu__link:hover {
   color: var(--accent-colour);
 }
 
-.list .item:not(:last-child) {
+.list .menu__item:not(:last-child) {
   margin-right: 50px;
 }
 
@@ -377,14 +378,14 @@ overflow: hidden; */
 }
 
 /* ---------------Contacts--------------- */
-.contact-list {
+.container__list {
   /* gap: 50px; */
   display: flex;
   align-items: center;
   margin-left: auto;
 }
 
-.contact-link {
+.sector__link {
   display: flex;
   color: var(--text-colour-two);
   font-weight: 500;
@@ -393,15 +394,15 @@ overflow: hidden; */
   letter-spacing: 0.02em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.contact-link:focus, .contact-link:hover {
+.sector__link:focus, .sector__link:hover {
   color: var(--accent-colour);
 }
 
-.list .reg:not(:last-child) {
+.list .sector__reg:not(:last-child) {
   margin-right: 50px;
 }
 
-.reg-contact {
+.sector__contact {
   margin-top: auto;
   margin-bottom: auto;
   margin-right: 10px;
@@ -450,10 +451,19 @@ overflow: hidden; */
 .benefits {
   padding-top: 94px;
 }
-.benefits-list {
+
+.picture-list {
   display: flex;
 }
-.benefits-box {
+
+.picture-list__block {
+  max-width: 270px;
+}
+.picture-list__block:not(:last-child) {
+  margin-right: 30px;
+}
+
+.block__box {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -462,23 +472,18 @@ overflow: hidden; */
   border-radius: 4px;
   background-color: var(--command-bg-colour);
 }
-.benefits-title {
+
+.block__title {
   margin-bottom: 10px;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
 }
-.benefits-description {
+
+.block__description {
   color: var(--text-colour-two);
   font-size: 14px;
   line-height: 1.71;
-}
-
-.benefits-block {
-  max-width: 270px;
-}
-.benefits-block:not(:last-child) {
-  margin-right: 30px;
 }
 
 .works {
@@ -588,19 +593,21 @@ overflow: hidden; */
 .clients {
   padding: 94px 0;
 }
-.clients-list {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-}
-.clients-title {
+
+.container__title {
   margin-bottom: 50px;
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
 }
 
-.link-client {
+.brand-list {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.brand-list__client {
   display: flex;
   width: 170px;
   height: 92px;
@@ -612,7 +619,7 @@ overflow: hidden; */
   outline: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.link-client:focus, .link-client:hover {
+.brand-list__client:focus, .brand-list__client:hover {
   border-color: var(--accent-colour);
   fill: var(--accent-colour);
 }
@@ -727,7 +734,7 @@ overflow: hidden; */
   min-width: 231px;
   margin-right: 70px;
 }
-.logo-address > .logo {
+.logo-address > .activation__logo {
   margin-right: 0;
   color: var(--bg-white-colour);
 }

@@ -1,20 +1,19 @@
 .clients {
   padding: 94px 0;
-
-  &-list {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-  }
-  &-title {
-    margin-bottom: 50px;
-    font-size: 36px;
-    line-height: 1.16;
-    text-align: center;
-  }
+}
+.container__title {
+  margin-bottom: 50px;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+}
+.brand-list {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
-.link-client {
+.brand-list__client {
   display: flex;
   width: 170px;
   height: 92px;
